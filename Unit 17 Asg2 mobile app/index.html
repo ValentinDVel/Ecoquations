@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecoquation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="eco-header">
+        <img src="leaf1.png" alt="Leaf" class="eco-leaf">
+        <h1>Ecoquation - Maths made green</h1>
+        <img src="leaf2.png" alt="Leaf" class="eco-leaf">
+    </div>
+    <div class="eco-main">
+        <div class="level-select">
+            <label for="level">Select Level:</label>
+            <select id="level">
+                <option value="0">🌱 Level 0 (No Time Limit)</option>
+                <option value="1">🌳 Level 1 (20s per question)</option>
+                <option value="2">🌲 Level 2 (10s per question)</option>
+            </select>
+            <button id="start-btn">Start Game</button>
+        </div>
+        <div class="game-area hidden" id="game-area">
+            <div class="eco-question-area">
+                <div id="nature-graphic" class="nature-graphic"></div>
+                <div id="question"></div>
+            </div>
+            <form id="answer-form">
+                <input type="number" id="answer" autocomplete="off" required placeholder="Your answer" />
+                <button type="submit">Submit</button>
+            </form>
+            <div class="eco-info">
+                <span id="score">Score: 0</span>
+                <span id="question-number">Question 1/10</span>
+                <span id="timer"></span>
+            </div>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over!</h2>
+            <div id="final-score"></div>
+            <button onclick="location.reload()">Play Again</button>
+            <div class="eco-message">
+                <p>🌍 Thanks for playing! Remember, practicing your math skills is good for your brain, and caring for the Earth is good for everyone!</p>
+                <img src="tree1.png" alt="Tree" class="eco-tree">
+            </div>
+        </div>
+    </div>
+    <audio id="correct-sound" src="https://cdn.pixabay.com/audio/2022/08/20/audio_124bfa8e8c.mp3"></audio>
+    <audio id="eco-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9a1ba6.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

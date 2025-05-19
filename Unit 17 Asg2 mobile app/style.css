@@ -1,0 +1,172 @@
+body {
+    background: linear-gradient(#b7e6a5 0%, #e9f9e4 100%);
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    color: #216b34;
+}
+
+.eco-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d2f2c2;
+    padding: 15px 0;
+    box-shadow: 0 2px 6px #b3dab3;
+}
+
+.eco-header h1 {
+    margin: 0 20px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #216b34;
+    text-shadow: 1px 1px 0 #9fd18b;
+}
+
+.eco-leaf {
+    width: 50px;
+    height: 50px;
+    animation: leaf-bounce 2s infinite alternate;
+}
+
+@keyframes leaf-bounce {
+    to { transform: translateY(-8px) rotate(-10deg);}
+}
+
+.eco-main {
+    max-width: 420px;
+    margin: 35px auto;
+    background: #ffffffd6;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px #bfdcbf;
+    padding: 30px;
+    position: relative;
+}
+
+.level-select {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.level-select label, .level-select select {
+    font-size: 1.1em;
+    padding: 4px 6px;
+}
+
+#start-btn {
+    background: #6dbb6d;
+    color: #fff;
+    font-size: 1.1em;
+    margin-left: 8px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#start-btn:hover {
+    background: #4e9c4e;
+}
+
+.game-area {
+    text-align: center;
+}
+
+.eco-question-area {
+    margin-bottom: 16px;
+}
+
+#question {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #247c3f;
+}
+
+.nature-graphic {
+    margin: 0 auto 12px auto;
+    min-height: 45px;
+}
+
+#answer-form input[type=number] {
+    width: 110px;
+    font-size: 1.3em;
+    padding: 5px 8px;
+    border-radius: 7px;
+    border: 1px solid #9fd18b;
+    margin-right: 8px;
+    outline: none;
+}
+
+#answer-form button {
+    background: #6dbb6d;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#answer-form button:hover {
+    background: #4e9c4e;
+}
+
+.eco-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 1.1em;
+    background: #e2f9e2;
+    border-radius: 9px;
+    padding: 8px 14px;
+}
+
+#timer {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+#game-over {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#final-score {
+    font-size: 1.4em;
+    margin: 14px 0;
+    color: #216b34;
+}
+
+.eco-message {
+    margin-top: 14px;
+    background: #e2f9e2;
+    border-radius: 10px;
+    padding: 12px 18px;
+}
+
+.eco-tree {
+    width: 60px;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .eco-main {
+        padding: 10px;
+        margin: 10px;
+    }
+    .eco-header h1 {
+        font-size: 1.5em;
+    }
+    .eco-leaf {
+        width: 32px;
+        height: 32px;
+    }
+}
